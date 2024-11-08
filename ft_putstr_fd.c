@@ -6,7 +6,7 @@
 /*   By: mel-mouh <mel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 18:27:41 by mel-mouh          #+#    #+#             */
-/*   Updated: 2024/11/06 17:07:44 by mel-mouh         ###   ########.fr       */
+/*   Updated: 2024/11/08 11:43:43 by mel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr_fd(char *s, int fd)
 	size_t	i;
 
 	i = 0;
-	if (s == NULL)
+	if (s == NULL || fd < 0)
 		return ;
 	while (s[i] != '\0')
 	{

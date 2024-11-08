@@ -6,7 +6,7 @@
 /*   By: mel-mouh <mel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 18:39:37 by mel-mouh          #+#    #+#             */
-/*   Updated: 2024/11/06 17:07:14 by mel-mouh         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:20:21 by mel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (lst != NULL)
 	{
 		tmp = (f)(lst->content);
-		if (tmp == NULL)
-		{
-			ft_lstclear(&head, del);
-			return (NULL);
-		}
 		new_node = ft_lstnew(tmp);
 		if (new_node == NULL)
 		{
+			free(tmp);
 			ft_lstclear(&head, del);
 			return (NULL);
 		}

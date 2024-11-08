@@ -6,7 +6,7 @@
 /*   By: mel-mouh <mel-mouh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 18:40:49 by mel-mouh          #+#    #+#             */
-/*   Updated: 2024/11/06 17:07:41 by mel-mouh         ###   ########.fr       */
+/*   Updated: 2024/11/08 11:43:34 by mel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putnbr_fd(int n, int fd)
 	unsigned int	m;
 
 	m = 0;
+	if (fd < 0)
+		return ;
 	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
