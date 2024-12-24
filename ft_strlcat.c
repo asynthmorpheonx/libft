@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-mouh <mel-mouh@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: mel-mouh <mel-mouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 16:55:08 by mel-mouh          #+#    #+#             */
-/*   Updated: 2024/11/08 11:59:01 by mel-mouh         ###   ########.fr       */
+/*   Updated: 2024/12/24 17:47:38 by mel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 
 	i = 0;
 	slen = ft_strlen(src);
+	if (!src)
+		return (NULL);
 	if (size == 0 && dest == NULL)
 		return (slen);
 	j = ft_strlen(dest);

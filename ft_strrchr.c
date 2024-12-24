@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-mouh <mel-mouh@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: mel-mouh <mel-mouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 17:36:00 by mel-mouh          #+#    #+#             */
-/*   Updated: 2024/11/06 17:08:08 by mel-mouh         ###   ########.fr       */
+/*   Updated: 2024/12/24 17:51:29 by mel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strrchr(const char *str, int c)
 {
 	int	i;
 
+	if (!str)
+		return (NULL);
 	i = ft_strlen(str);
 	while (i >= 0)
 	{

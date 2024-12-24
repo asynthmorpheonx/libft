@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-mouh <mel-mouh@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: mel-mouh <mel-mouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 18:41:45 by mel-mouh          #+#    #+#             */
-/*   Updated: 2024/11/06 17:08:10 by mel-mouh         ###   ########.fr       */
+/*   Updated: 2024/12/24 17:51:48 by mel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	j;
 	char	*s2;
 
+	if (!s1)
+		return (NULL);
 	i = 0;
 	j = ft_strlen(s1);
 	if (s1 == NULL || set == NULL)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-mouh <mel-mouh@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: mel-mouh <mel-mouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 17:40:48 by mel-mouh          #+#    #+#             */
-/*   Updated: 2024/11/08 11:31:47 by mel-mouh         ###   ########.fr       */
+/*   Updated: 2024/12/24 17:51:06 by mel-mouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	j;
 
 	i = 0;
-	if (haystack == NULL)
+	if (haystack == NULL || needle == NULL)
 		return (NULL);
 	if (needle[i] == '\0')
 		return ((char *)haystack);
