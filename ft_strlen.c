@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-mouh <mel-mouh@student.42.fr>          +#+  +:+       +#+        */
+/*   By:  mel-mouh < mel-mouh@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 16:58:57 by mel-mouh          #+#    #+#             */
-/*   Updated: 2024/12/24 17:49:24 by mel-mouh         ###   ########.fr       */
+/*   Updated: 2025/02/22 21:35:38 by  mel-mouh        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlen(const char *str)
 
 	i = 0;
 	if (!str)
-		return (NULL);
+		return (0);
 	while (str[i] != '\0')
 		i++;
 	return (i);
