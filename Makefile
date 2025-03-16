@@ -9,7 +9,7 @@ SRC = ft_atoi.c ft_bzero.c ft_itoa.c ft_putendl_fd.c ft_strjoin.c ft_strrchr.c\
 	get_next_line.c
 BSRC = ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstmap_bonus.c\
 	ft_lstadd_front_bonus.c ft_lstiter_bonus.c ft_lstnew_bonus.c\
-	ft_lstclear_bonus.c ft_lstlast_bonus.c ft_lstsize_bonus.c
+	ft_lstclear_bonus.c ft_lstlast_bonus.c ft_lstsize_bonus.c g_container.c
 OBJ = ${SRC:.c=.o}
 BOBJ = ${BSRC:.c=.o}
 CFLAGS = -Wall -Werror -Wextra
@@ -20,18 +20,18 @@ all : $(NAME)
 re : fclean all
 
 $(NAME) : $(OBJ)
-	@ar rcs $(NAME) $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 
 bonus : $(BOBJ) $(OBJ)
-	@ar rcs $(NAME) $(BOBJ) $(OBJ)
+	ar rcs $(NAME) $(BOBJ) $(OBJ)
 
 %.o : %.c
-	@$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean :
-	@rm -f $(OBJ) $(BOBJ)
+	rm -f $(OBJ) $(BOBJ)
 
 fclean : clean
-	@rm -f $(NAME)
+	rm -f $(NAME)
 
 .PHONY: all re clean fclean bonus
